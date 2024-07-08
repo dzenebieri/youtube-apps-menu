@@ -1,0 +1,325 @@
+body {
+  font-family: "Roboto", "Arial", sans-serif;
+  background-color: #0f0f0f;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.theNavBNDivCS {
+  display: inline;
+  width: 240px;
+  height: 56px;
+}
+
+.YouTubeCS {
+  display: inline-flex !important;
+  position: fixed;
+  cursor: pointer;
+  top: 18px;
+  left: 72px;
+}
+
+.navBNCS {
+  background: none;
+  border: none;
+  outline: none;
+  display: inline-flex;
+  position: fixed;
+  cursor: pointer;
+  fill: var(--buttonClass-fill-color, currentcolor);
+  color: #fff;
+  padding: 8px;
+  top: 8px;
+  left: 16px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+}
+
+.navBNCS:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.navBNCS:active {
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 7px;
+}
+
+.navShowJSCS {
+  display: block;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  left: 240px;
+  width: 100%;
+  height: 100%;
+  transition: 0.2s;
+}
+
+.navShowJSCS::after {
+  background-color: #0f0f0f;
+  position: fixed;
+  content: "";
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 16px;
+}
+
+.navCS.navShowJSCS {
+  margin-left: -240px;
+  transition-property: transform;
+  transition-property: -moz-transform;
+  transition-property: -webkit-transform;
+  transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+}
+
+.navCS.navShowJSCS .navDivCS {
+  left: 0;
+  margin-left: -240px;
+  transition-property: transform;
+  transition-property: -moz-transform;
+  transition-property: -webkit-transform;
+  transform: translate3d(100%, 0, 0);
+  -moz-transform: translate3d(100%, 0, 0);
+  -webkit-transform: translate3d(100%, 0, 0);
+}
+
+.navCS.navRemoveJSCS .navDivCS {
+  left: 0;
+  margin-left: -240px;
+  transition-property: transform;
+  transition-property: -moz-transform;
+  transition-property: -webkit-transform;
+  transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+}
+
+.navCS .navDivCS {
+  background-color: #0f0f0f;
+  display: inline-flex;
+  position: fixed;
+  left: -1000%;
+  height: 100%;
+  width: 240px;
+  transition: 0.2s;
+}
+
+.navDivsCS {
+  position: absolute;
+  width: 100%;
+  height: 85%;
+  top: 56px;
+}
+
+.navDivsCS:hover {
+  overflow: hidden;
+  overflow-y: auto;
+}
+
+.navDivsCS:hover::-webkit-scrollbar {
+  background: transparent;
+  width: 16px;
+}
+
+.navDivsCS:hover::-webkit-scrollbar-thumb {
+  height: auto;
+  border-radius: 8px;
+  border: 4px solid transparent;
+  background-clip: content-box;
+  background-color: #717171;
+}
+
+.navDivsScrollPCS {
+  overflow: hidden;
+  overflow-y: auto;
+}
+
+.navDivsssCS {
+  position: relative;
+  width: 216px;
+  height: 120px;
+  padding: 12px;
+}
+
+.navDivsssCS::after {
+  position: absolute;
+  content: "";
+  bottom: -1px;
+  right: 16px;
+  width: calc(100% + 100px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
+
+.navULsssCS {
+  list-style: none;
+  width: 180px;
+  height: 40px;
+  margin: 0;
+  padding: 0 12px;
+}
+
+.navULsssCS li {
+  width: 204px;
+  height: 40px;
+  margin-left: -12px;
+}
+
+.navACS {
+  text-decoration: none;
+  display: flex;
+  cursor: pointer;
+  color: #f1f1f1;
+  font-size: 14px;
+  height: 40px;
+  width: 204px;
+}
+
+.navACS:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+
+.navACS:active {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  font-weight: 500;
+}
+
+.navACS div {
+  align-items: center;
+  display: flex;
+  width: 180px;
+  height: 40px;
+}
+
+.navACS button {
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 0 0 0 12px;
+}
+
+.navACS svg {
+  margin: 3.3px 24px 0 0;
+  fill: #f1f1f1;
+}
+
+.navACS p {
+  height: 20px;
+  min-width: 132px;
+  margin: 3.3px 0 0 0;
+}
+
+.navAHomeShowACS,
+.navAFlagShowACS {
+  visibility: hidden;
+}
+
+.navAHomeShowCS:active .navAHomeShowACS,
+.navAFlagShowCS:active .navAFlagShowACS {
+  visibility: visible;
+}
+
+.navSignBNCS p,
+.navSignBNCS svg {
+  fill: #3ea6ff;
+  color: #3ea6ff;
+}
+
+.navSignBNCS:hover {
+  background-color: #263850;
+  border-radius: 10px;
+}
+
+.navSignBNCS:active {
+  opacity: .7;
+}
+
+.navCopyrightCS {
+  display: inline-block !important;
+  position: absolute;
+  background: #0f0f0f;
+  color: #717171;
+  font-size: 12px;
+  padding: 16px 24px;
+  width: 192px;
+  height: 18px;
+  bottom: -2px;
+}
+
+.navScrollToTopBNCS {
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50px;
+  width: 40px;
+  height: 40px;
+  margin: 330px 0 23px 84px;
+  padding: 0;
+}
+
+.navScrollToTopBNCS:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.navScrollToTopBNCS:active {
+  opacity: 0.7;
+}
+
+@media (min-height: 970px) {
+  .navScrollToTopBNCS {
+    margin-top: 440px;
+  }
+}
+
+@media (min-height: 1100px) {
+  .navScrollToTopBNCS {
+    margin-top: 711px;
+  }
+}
+
+@media (min-height: 1414px) {
+  .navScrollToTopBNCS {
+    margin-top: 1111px;
+  }
+}
+
+@media (min-height: 1890px) {
+  .navScrollToTopBNCS {
+    margin-top: 2000px;
+  }
+}
+
+@media (min-height: 2930px) {
+  .navScrollToTopBNCS {
+    margin-top: 3000px;
+  }
+}
+
+@media (max-width: 240px) {
+  .navShowJSCS::after {
+    visibility: hidden;
+  }
+}
+
+@media (max-height: 165px) {
+  .navCopyrightCS {
+    position: absolute;
+    top: 70%;
+  }
+}
+
+@media (min-height: 200px) {
+  .navCopyrightCS {
+    bottom: -2px;
+  }
+}
